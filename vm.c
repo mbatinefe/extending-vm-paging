@@ -166,8 +166,6 @@ int createProc(char *fname, char *hname) {
   }
 
   // I set starting process as 0x1006. 
-  // I actually could not figure out why start is not 0x1000.
-  // This is the reason I could not finish the last part -> TBRK
   reg[PTBR] = 0x1006 + (mem[Proc_Count] * 0x20);
 
   // --------------------------------------------------------------
